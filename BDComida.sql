@@ -1,0 +1,12 @@
+CREATE DATABASE Alimentos;
+
+USE Alimentos;
+
+CREATE TABLE empleados (
+    id_COMPRA INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(100) NOT NULL,
+    Cedula VARCHAR(100) NOT NULL,
+    Producto INT NOT NULL,
+    Cantidad VARCHAR(100) NOT NULL,
+    Precio DECIMAL(10, 2) NOT NULL
+);
