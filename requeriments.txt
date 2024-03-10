@@ -1,5 +1,0 @@
-pip install fastapi
-pip install "uvicorn[standard]"
-pip install mysql-connector-python
-pip install pydantic
-pip install pytest
