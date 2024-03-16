@@ -22,3 +22,13 @@ def set_PEDIDO(pedido : Pedidos):
 @data.get("/Pedido/{id}")
 def get_PEDIDO(id: str):
     conn.execute(RAlimentos.select().where(RAlimentos.c.id == id)).first()
+    
+@data.delete("/Pedido/{id}")
+def delete_PEDIDO(id: str):
+    return conn.execute(RAlimentos.delete().where(RAlimentos.c.id == id)).first()
+
+@data.put("/Pedido/{id}")
+def delete_PEDIDO(id: str, pedido : Pedidos):
+    conn.execute(RAlimentos.update().values(Nombre = pedido.Nombre, Cedula = pedido.Cedula, Producto = pedido.Producto, Cantidad = pedido.Cantidad, Precio = pedido.Precio).where(RAlimentos.c.id == id))
+    return "Pedido Actualizado"
+    
